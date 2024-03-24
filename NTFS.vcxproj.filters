@@ -24,12 +24,18 @@
     <ClCompile Include="NTFS.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="FAT16.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FS.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="NTFS.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FAT16.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
