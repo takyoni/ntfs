@@ -3,8 +3,8 @@
 class NTFS :
 	public FS
 {
-public:
-	bool ReadCluster(unsigned int, BYTE*);
+protected:
+	// В разных ФС различается только процесс получения размера кластера
 	bool ReadClusterSize();
 };
 

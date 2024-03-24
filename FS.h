@@ -3,14 +3,12 @@
 class FS
 {
 protected:
-	unsigned int clusterSize = {0};
 	HANDLE fileHandler = NULL;
-public:
-//	virtual void Init(LPCWSTR);
+	unsigned int clusterSize = {0};
 	virtual bool ReadClusterSize();
+public:
+	virtual bool Init(LPCWSTR);
 	virtual bool ReadCluster(unsigned int, BYTE*);
 	virtual unsigned int ClusterSize() { return clusterSize; };
-	virtual bool ReadCluster(unsigned int, char*) { return false; };
-	FS(LPCWSTR);
 	virtual ~FS();
 };
