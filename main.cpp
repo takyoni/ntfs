@@ -10,7 +10,7 @@ int main()
     // NTFS
     NTFS fileSystem;
 
-    if (!fileSystem.Init(L"\\\\.\\E:")) {
+    if (!fileSystem.Init(L"\\\\.\\C:")) {
         cout << "Init: " << GetLastError();
         return false;
     };
