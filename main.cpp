@@ -2,6 +2,7 @@
 #include "FS.h"
 #include "NTFS.h"
 #include "FAT16.h"
+#include "HFS+.h"
 #include "windows.h"
 #include <iomanip>
 using namespace std;
@@ -77,6 +78,27 @@ int main()
     };
 
     cout << "Read cluster result: " << endl;
+    hexdump(cluster, clusterSize, clusterNumber * clusterSize);
+    cout << "Cluster size per bytes: " << dec << clusterSize << endl;
+    */
+
+    // HFS+
+    /*
+    HFSP fileSystem;
+
+    if (!fileSystem.Init(L"\\\\.\\F:")) {
+        cout << "Init: " << GetLastError();
+        return false;
+    };
+    unsigned int clusterSize = fileSystem.ClusterSize();
+    unsigned int clusterNumber = 0;
+    BYTE * cluster = new BYTE[clusterSize];
+
+    if (!fileSystem.ReadCluster(clusterNumber, cluster)) {
+        cout << "Read cluster error: " << GetLastError();
+        return false;
+    };
+
     hexdump(cluster, clusterSize, clusterNumber * clusterSize);
     cout << "Cluster size per bytes: " << dec << clusterSize << endl;
     */
