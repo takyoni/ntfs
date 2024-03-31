@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FAT16.cpp" />
+    <ClCompile Include="FAT32.cpp" />
     <ClCompile Include="FS.cpp" />
     <ClCompile Include="HFS+.cpp" />
     <ClCompile Include="main.cpp" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FAT16.h" />
+    <ClInclude Include="FAT32.h" />
     <ClInclude Include="FS.h" />
     <ClInclude Include="HFS+.h" />
     <ClInclude Include="NTFS.h" />
