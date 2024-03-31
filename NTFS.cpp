@@ -24,8 +24,9 @@ bool NTFS::ReadClusterSize()
         CloseHandle(fileHandler);
         return false;
     }
-    unsigned int sectorSize = (sector[12] << 8) | sector[11];
-    unsigned int countSectors = static_cast<unsigned int>(sector[13]);
+    BootRecord* pBootRecord = reinterpret_cast<BootRecord*>(sector);
+    unsigned int countSectors = static_cast<unsigned int>(pBootRecord->sectorsPerCluster);
+    unsigned int sectorSize = static_cast<unsigned int>(pBootRecord->bytesPerSector);
     clusterSize = sectorSize * countSectors;
     return true;
 }
