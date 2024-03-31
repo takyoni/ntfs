@@ -32,3 +32,4 @@ bool EXT::ReadClusterSize()
     clusterSize = sectorSize * countSectors;
     return true;
 }
+//.
